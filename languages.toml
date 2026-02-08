@@ -1,0 +1,50 @@
+[[language]]
+name = "r"
+file-types = ["R", "Rmd"]
+auto-format = true
+language-servers = ["air", "r"]
+
+[language-server.air]
+command = "air"
+args = ["language-server"]
+
+[[language]]
+name = "python"
+file-types = ["py", "ipynb"]
+language-servers = ["pylsp"]
+formatter = { command = "black", args = ["--fast", "-"] }
+auto-format = true
+
+[[language]]
+name = "latex"
+file-types = ["tex", "sty", "cls", "ltx"]
+language-servers = ["texlab"]
+formatter = { command = "latexindent", args = ["-l"], stdin = true }
+auto-format = true
+
+[[language]]
+name = "markdown"
+comment-tokens = ["-", "+", "*", "- [ ]", ">"]
+
+[[language]]
+name = "julia"
+scope = "source.julia"
+injection-regex = "julia"
+file-types = ["jl"]
+roots = ["Project.toml", "Manifest.toml", "JuliaProject.toml"]
+comment-token = "#"
+language-servers = ["julia"]
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.julia]
+command = "julia"
+timeout = 60
+args = ["-e", "using LanguageServer; runserver();"]
+
+[[language]]
+name = "rust"
+auto-format = true
+roots = ["Cargo.toml", "Cargo.lock"]
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
