@@ -12,8 +12,12 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
-[editor.file-picker]
-git-ignore = true
+[editor.soft-wrap]
+enable = true
 
 [editor.indent-guides]
 render = true
+
+[keys.normal."space"]
+Q = [":write-all", ":buffer-close-all", ":quit"]
+q = [":write-all", ":buffer-close-all", ":quit"]

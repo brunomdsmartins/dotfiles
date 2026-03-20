@@ -9,6 +9,15 @@ command = "air"
 args = ["language-server"]
 
 [[language]]
+name = "c"
+file-types = ["c", "h"]
+auto-format = true
+
+[language.formatter]
+command = "clang-format"
+args = []
+
+[[language]]
 name = "python"
 file-types = ["py", "ipynb"]
 language-servers = ["pylsp"]
