@@ -1,3 +1,4 @@
+# R
 [[language]]
 name = "r"
 file-types = ["R", "Rmd"]
@@ -8,6 +9,19 @@ language-servers = ["air", "r"]
 command = "air"
 args = ["language-server"]
 
+# Python
+[[language]]
+name = "python"
+file-types = ["py"]
+language-servers = ["pyright"]
+formatter = { command = "black", args = ["--fast", "-"] }
+auto-format = true
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+# C
 [[language]]
 name = "c"
 file-types = ["c", "h"]
@@ -17,13 +31,7 @@ auto-format = true
 command = "clang-format"
 args = []
 
-[[language]]
-name = "python"
-file-types = ["py", "ipynb"]
-language-servers = ["pylsp"]
-formatter = { command = "black", args = ["--fast", "-"] }
-auto-format = true
-
+# LaTeX
 [[language]]
 name = "latex"
 file-types = ["tex", "sty", "cls", "ltx"]
@@ -31,10 +39,12 @@ language-servers = ["texlab"]
 formatter = { command = "latexindent", args = ["-l"], stdin = true }
 auto-format = true
 
+# Markdown
 [[language]]
 name = "markdown"
 comment-tokens = ["-", "+", "*", "- [ ]", ">"]
 
+# Julia
 [[language]]
 name = "julia"
 scope = "source.julia"
@@ -49,11 +59,3 @@ indent = { tab-width = 4, unit = "    " }
 command = "julia"
 timeout = 60
 args = ["-e", "using LanguageServer; runserver();"]
-
-[[language]]
-name = "rust"
-auto-format = true
-roots = ["Cargo.toml", "Cargo.lock"]
-
-[language-server.rust-analyzer]
-command = "rust-analyzer"
