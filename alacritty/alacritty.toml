@@ -1,6 +1,10 @@
 [general]
-import = ["~/.config/alacritty/themes/catppuccin-latte.toml"]
+import = [
+"C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\themes\\catppuccin-latte.toml",
+"~/.config/alacritty/themes/catppuccin-latte.toml"
+]
 live_config_reload = true
+working_directory = "C:\\Users\\70087700"
 
 [window]
 decorations = "none"
