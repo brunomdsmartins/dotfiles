@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_latte"
 
 [editor]
 line-number = "relative"
@@ -20,4 +20,4 @@ render = true
 
 [keys.normal."space"]
 Q = [":write-all", ":buffer-close-all", ":quit"]
-q = [":write-all", ":buffer-close-all", ":quit"]
+q = [":write-all", ":buffer-close-all"]

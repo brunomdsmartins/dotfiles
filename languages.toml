@@ -1,15 +1,11 @@
-# R
+# --- R ---
 [[language]]
 name = "r"
 file-types = ["R", "Rmd"]
 auto-format = true
 language-servers = ["air", "r"]
 
-[language-server.air]
-command = "air"
-args = ["language-server"]
-
-# Python
+# --- Python ---
 [[language]]
 name = "python"
 file-types = ["py"]
@@ -17,11 +13,7 @@ language-servers = ["pyright"]
 formatter = { command = "black", args = ["--fast", "-"] }
 auto-format = true
 
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
-
-# C
+# --- C ---
 [[language]]
 name = "c"
 file-types = ["c", "h"]
@@ -31,7 +23,7 @@ auto-format = true
 command = "clang-format"
 args = []
 
-# LaTeX
+# --- LaTeX ---
 [[language]]
 name = "latex"
 file-types = ["tex", "sty", "cls", "ltx"]
@@ -39,12 +31,13 @@ language-servers = ["texlab"]
 formatter = { command = "latexindent", args = ["-l"], stdin = true }
 auto-format = true
 
-# Markdown
+# --- Markdown ---
+# TODO: Add formatter
 [[language]]
 name = "markdown"
 comment-tokens = ["-", "+", "*", "- [ ]", ">"]
 
-# Julia
+# --- Julia ---
 [[language]]
 name = "julia"
 scope = "source.julia"
@@ -55,7 +48,31 @@ comment-token = "#"
 language-servers = ["julia"]
 indent = { tab-width = 4, unit = "    " }
 
+# --- TOML ---
+[[language]]
+name = "toml"
+auto-format = true
+language-servers = ["tombi"]
+
+[[language]]
+name = "lua"
+file-types = ["lua"]
+language-servers = ["lua-language-server"]
+formatter = { command = "stylua", args = ["-"] }
+auto-format = true
+
+[language-server.air]
+command = "air"
+args = ["language-server"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
 [language-server.julia]
 command = "julia"
 timeout = 60
 args = ["-e", "using LanguageServer; runserver();"]
+
+[language-server.lua-language-server]
+command = "lua-language-server"
