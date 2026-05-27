@@ -18,7 +18,7 @@ On Windows:
 ```powershell
 git clone https://github.com/brunomdsmartins/dotfiles $HOME\AppData\Roaming\dotfiles
 
-cd $HOME\.config\dotfiles
+cd $HOME\AppData\Roaming\dotfiles
 
 .\install.ps1
 ```
