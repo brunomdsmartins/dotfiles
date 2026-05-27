@@ -8,9 +8,9 @@ language-servers = ["air", "r"]
 # --- Python ---
 [[language]]
 name = "python"
-file-types = ["py"]
-language-servers = ["pyright"]
-formatter = { command = "black", args = ["--fast", "-"] }
+file-types = ["py", "ipynb"]
+language-servers = ["ty", "ruff"]
+formatter = { command = "ruff", args = ["format", "-"] }
 auto-format = true
 
 # --- C ---
@@ -65,9 +65,13 @@ auto-format = true
 command = "air"
 args = ["language-server"]
 
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
 
 [language-server.julia]
 command = "julia"
