@@ -16,7 +16,7 @@ chmod +x install.sh
 On Windows:
 
 ```powershell
-git clone https://github.com/brunomdsmartins/dotfiles $HOME\.config\dotfiles
+git clone https://github.com/brunomdsmartins/dotfiles $HOME\AppData\Roaming\dotfiles
 
 cd $HOME\.config\dotfiles
 
