@@ -4,10 +4,10 @@ import = [
 "~/.config/alacritty/themes/catppuccin-latte.toml"
 ]
 live_config_reload = true
-working_directory = "C:\\Users\\70087700"
+working_directory = "C:\\Users\\70087700\\Projects"
 
 [window]
-decorations = "none"
+decorations = "full"
 startup_mode = "Maximized"
 opacity = 0.94
 blur = true
