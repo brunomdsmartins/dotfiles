@@ -1,7 +1,6 @@
-[general]
 import = [
-"C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\themes\\catppuccin-latte.toml",
-"~/.config/alacritty/themes/catppuccin-latte.toml"
+  "C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\themes\\catppuccin-latte.toml",
+  "~/.config/alacritty/themes/catppuccin-latte.toml"
 ]
 live_config_reload = true
 working_directory = "C:\\Users\\70087700\\Projects"
@@ -31,7 +30,4 @@ unfocused_hollow = true
 hide_when_typing = true
 
 [keyboard]
-bindings = [
-  { key = "T", mods = "Control", action = "CreateNewWindow" },
-  { key = "t", mods = "Control", action = "CreateNewWindow" }
-]
+bindings = [{ key = "T", mods = "Control", action = "CreateNewWindow" }]
