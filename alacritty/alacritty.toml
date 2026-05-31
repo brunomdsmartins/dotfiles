@@ -1,6 +1,9 @@
 import = [
   "~/.config/dotfiles/alacritty/themes/catppuccin-latte.toml",
-  "C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\themes\\catppuccin-latte.toml"
+  "~/.config/dotfiles/alacritty/pwd_linux.toml",
+
+  "C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\themes\\catppuccin-latte.toml",
+  "C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\pwd_windows.toml"
 ]
 live_config_reload = true
 
