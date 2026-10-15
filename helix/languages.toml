@@ -1,4 +1,4 @@
-# --- R ---
+# ====== R ======
 [[language]]
 name = "r"
 file-types = ["R", "Rmd"]
@@ -13,7 +13,7 @@ language-servers = ["ty", "ruff"]
 formatter = { command = "ruff", args = ["format", "-"] }
 auto-format = true
 
-# --- C ---
+# ====== C ======
 [[language]]
 name = "c"
 file-types = ["c", "h"]
@@ -23,7 +23,7 @@ auto-format = true
 command = "clang-format"
 args = []
 
-# --- LaTeX ---
+# ====== LaTeX ======
 [[language]]
 name = "latex"
 file-types = ["tex", "sty", "cls", "ltx"]
@@ -31,35 +31,11 @@ language-servers = ["texlab"]
 formatter = { command = "latexindent", args = ["-l"], stdin = true }
 auto-format = true
 
-# --- Markdown ---
-# TODO: Add formatter
-[[language]]
-name = "markdown"
-comment-tokens = ["-", "+", "*", "- [ ]", ">"]
-
-# --- Julia ---
-[[language]]
-name = "julia"
-scope = "source.julia"
-injection-regex = "julia"
-file-types = ["jl"]
-roots = ["Project.toml", "Manifest.toml", "JuliaProject.toml"]
-comment-token = "#"
-language-servers = ["julia"]
-indent = { tab-width = 4, unit = "    " }
-
-# --- TOML ---
+# ====== TOML ======
 [[language]]
 name = "toml"
 auto-format = true
 language-servers = ["tombi"]
-
-[[language]]
-name = "lua"
-file-types = ["lua"]
-language-servers = ["lua-language-server"]
-formatter = { command = "stylua", args = ["-"] }
-auto-format = true
 
 [language-server.air]
 command = "air"
@@ -72,11 +48,3 @@ args = ["server"]
 [language-server.ty]
 command = "ty"
 args = ["server"]
-
-[language-server.julia]
-command = "julia"
-timeout = 60
-args = ["-e", "using LanguageServer; runserver();"]
-
-[language-server.lua-language-server]
-command = "lua-language-server"
