@@ -1,14 +1,6 @@
-import = [
-  "~/.config/dotfiles/alacritty/themes/catppuccin-latte.toml",
-  "~/.config/dotfiles/alacritty/pwd_linux.toml",
-
-  "C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\themes\\catppuccin-latte.toml",
-  "C:\\Users\\70087700\\AppData\\Roaming\\dotfiles\\alacritty\\pwd_windows.toml"
-]
-live_config_reload = true
 
 [window]
-decorations = "full"
+decorations = "none"
 startup_mode = "Maximized"
 opacity = 0.94
 blur = true
@@ -23,13 +15,16 @@ bold_italic = { family = "Ubuntu Mono", style = "Regular" }
 
 [cursor]
 style = { shape = "Block", blinking = "On" }
-
 blink_interval = 500
 blink_timeout = 0
 unfocused_hollow = true
 
-[mouse]
-hide_when_typing = true
-
 [keyboard]
 bindings = [{ key = "T", mods = "Control", action = "CreateNewWindow" }]
+
+[general]
+live_config_reload = true
+import = [
+  "~/.config/dotfiles/alacritty/themes/gruber-darker.toml",
+  "~/.config/dotfiles/alacritty/pwd_linux.toml",
+]
